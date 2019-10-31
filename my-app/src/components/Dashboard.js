@@ -23,17 +23,24 @@ export default function Dashboard(props) {
 // styled components:
 
 const Button = styled.button`
-        width: 10%
+        height: 2.5rem; 
+        font-size: 1.8rem;
+        border-radius: 100px;       
+        width: 15%
         background-color: white;
-        color: black;
-        height: 2rem;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
+        color: navy;
+        height: 2.5rem;
+        font-family: 'Shadows Into Light', cursive;
+        margin: 1rem 1rem;
+
+
+        
     `;
 const Buttons = styled.div`
+  border-radius: 100px;
   width: 90%;
   margin-left: 5%;
-  background-color: black;
+  background-color: navy;
   display: flex;
   justify-content: space-around;
 `;
