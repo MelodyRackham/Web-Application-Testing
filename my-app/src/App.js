@@ -8,9 +8,6 @@ function App() {
   const [strikes, setStrikes] = useState(0);
   const [balls, setBalls] = useState(0);
 
-  const Container = styled.div`
-    border: 3px solid black;
-  `;
   const strike = () => {
     if (strikes === 2) {
       setStrikes(0);
@@ -39,10 +36,28 @@ function App() {
     setBalls(0);
   };
   return (
-    <Container className='container'>
-      <Display strikes={strikes} balls={balls} />
+    <div className='container'>
+      <PlayBall> Let's Play Ball!</PlayBall>
       <Dashboard ball={ball} strike={strike} foul={foul} hit={hit} />
-    </Container>
+      <Count>
+        <Display strikes={strikes} balls={balls} />
+      </Count>
+    </div>
   );
 }
 export default App;
+
+//styled componentts:
+
+const PlayBall = styled.h1`
+  color: navy;
+  font-size: 4rem;
+  text-align: center;
+  font-family: 'Shadows Into Light', cursive;
+`;
+
+const Count = styled.h3`
+  font-size: 2rem;
+  text-align: center;
+  font-family: 'Shadows Into Light', cursive;
+`;
