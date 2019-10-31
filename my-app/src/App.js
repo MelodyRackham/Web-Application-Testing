@@ -3,6 +3,7 @@ import './App.css';
 import Dashboard from './components/Dashboard';
 import Display from './components/Display';
 import styled from 'styled-components';
+// import baseball from './baseball.jpg';
 
 function App() {
   const [strikes, setStrikes] = useState(0);
@@ -37,6 +38,7 @@ function App() {
   };
   return (
     <div className='container'>
+      <HeroImage src='http://images.huffingtonpost.com/2016-09-26-1474925496-3357260-BaseBall.jpg' />
       <PlayBall> Let's Play Ball!</PlayBall>
       <Dashboard ball={ball} strike={strike} foul={foul} hit={hit} />
       <Count>
@@ -60,4 +62,10 @@ const Count = styled.h3`
   font-size: 2rem;
   text-align: center;
   font-family: 'Shadows Into Light', cursive;
+`;
+
+const HeroImage = styled.img`
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
 `;
